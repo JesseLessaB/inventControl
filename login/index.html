@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container" id="login-form">
+            <h1>InventControl⚙️</h1>
+            <h2>Login</h2>
+            <div class="form-group">
+                <label for="login-email">Email:</label>
+                <input type="email" id="login-email" required>
+            </div>
+            <div class="form-group">
+                <label for="login-password">Senha:</label>
+                <input type="password" id="login-password" required>
+            </div>
+            <button onclick="login()">Entrar</button>
+            <div class="switch-form">
+                <p>Não tem conta? <a href="#" onclick="showRegister(); return false;">Cadastre-se</a></p>
+            </div>
+            <div id="login-error" class="error"></div>
+            <div id="login-success" class="success"></div>
+        </div>
+
+        <div class="form-container" id="register-form" style="display: none;">
+            <h1>InventControl⚙️</h1>
+            <h2>Cadastro</h2>
+            <div class="form-group">
+                <label for="register-name">Nome:</label>
+                <input type="text" id="register-name" required>
+            </div>
+            <div class="form-group">
+                <label for="register-email">Email:</label>
+                <input type="email" id="register-email" required>
+            </div>
+            <div class="form-group">
+                <label for="register-password">Senha:</label>
+                <input type="password" id="register-password" required>
+            </div>
+            <div class="form-group">
+                <label for="register-confirm-password">Confirmar Senha:</label>
+                <input type="password" id="register-confirm-password" required>
+            </div>
+            <div class="lgpd-checkbox">
+                <p>Nós respeitamos sua privacidade e estamos comprometidos em proteger seus dados pessoais. Este Termo de Consentimento explica como coletamos, usamos e compartilhamos suas informações pessoais de acordo com a Lei Geral de Proteção de Dados (LGPD).</p>
+                <p><strong>1. Dados Coletados:</strong> Coletamos seu nome, e-mail e senha para criar sua conta e fornecer nossos serviços.</p>
+                <p><strong>2. Finalidade:</strong> Seus dados são utilizados para autenticação, personalização da experiência e comunicação sobre serviços.</p>
+                <p><strong>3. Compartilhamento:</strong> Seus dados pessoais não serão compartilhados com terceiros sem seu consentimento, exceto quando exigido por lei.</p>
+                <p><strong>4. Seus Direitos:</strong> Você tem o direito de acessar, corrigir, excluir ou portar seus dados a qualquer momento.</p>
+                <p>Ao marcar a caixa abaixo, você concorda com estes termos e com o processamento de seus dados pessoais para estas finalidades.</p>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="termosCheckbox" onchange="validarEnvio()">
+                    <label for="termosCheckbox">Sim. Li e concordo com os Termos e Condições.</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="newsletterCheckbox">
+                    <label for="newsletterCheckbox">Sim. Também quero receber descontos e novidades.</label>
+                </div>
+            </div>
+            <button id="register-button" onclick="register()" disabled>Cadastrar</button>
+            <div class="switch-form">
+                <p>Já tem conta? <a href="#" onclick="showLogin(); return false;">Faça login</a></p>
+            </div>
+            <div id="register-error" class="error"></div>
+            <div id="register-success" class="success"></div>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
