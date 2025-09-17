@@ -1,4 +1,5 @@
-function showRegister() {
+ // Funções para alternar entre formulários
+ function showRegister() {
     document.getElementById('login-form').style.display = 'none';
     document.getElementById('register-form').style.display = 'block';
     clearMessages();
@@ -17,14 +18,14 @@ function clearMessages() {
     document.getElementById('register-success').textContent = '';
 }
 
-// Validação do checkbox de termos
+// Validação dos termos
 function validarEnvio() {
     const checkbox = document.getElementById('termosCheckbox');
     const button = document.getElementById('register-button');
     button.disabled = !checkbox.checked;
 }
 
-// Função de login simulada
+// Função de login 
 function login() {
     const email = document.getElementById('login-email').value;
     const password = document.getElementById('login-password').value;
@@ -39,9 +40,14 @@ function login() {
         return;
     }
     
-    // Simulação de login bem-sucedido
-    successDiv.textContent = 'Login realizado com sucesso!';
-    // Em um caso real, você faria uma requisição para o servidor aqui
+    // Exibir tela de transição
+    document.getElementById('login-container').style.display = 'none';
+    document.getElementById('transition-screen').style.display = 'flex';
+    
+    setTimeout(function() {
+    
+        window.location.href = '/tela1/tela1.html';
+    }, 1000); 
 }
 
 // Função de registro simulada
@@ -71,7 +77,7 @@ function register() {
         return;
     }
     
-    // Simulação de registro bem-sucedido
+    
     successDiv.textContent = 'Cadastro realizado com sucesso!';
-    // Em um caso real, você faria uma requisição para o servidor aqui
+   
 }

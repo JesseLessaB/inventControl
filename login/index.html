@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>InventControl⚙️ - LOGIN</title>
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="login-container">
         <div class="form-container" id="login-form">
             <h1>InventControl⚙️</h1>
             <h2>Login</h2>
@@ -26,7 +26,7 @@
             <div id="login-error" class="error"></div>
             <div id="login-success" class="success"></div>
         </div>
-
+        
         <div class="form-container" id="register-form" style="display: none;">
             <h1>InventControl⚙️</h1>
             <h2>Cadastro</h2>
@@ -50,7 +50,7 @@
                 <p>Nós respeitamos sua privacidade e estamos comprometidos em proteger seus dados pessoais. Este Termo de Consentimento explica como coletamos, usamos e compartilhamos suas informações pessoais de acordo com a Lei Geral de Proteção de Dados (LGPD).</p>
                 <p><strong>1. Dados Coletados:</strong> Coletamos seu nome, e-mail e senha para criar sua conta e fornecer nossos serviços.</p>
                 <p><strong>2. Finalidade:</strong> Seus dados são utilizados para autenticação, personalização da experiência e comunicação sobre serviços.</p>
-                <p><strong>3. Compartilhamento:</strong> Seus dados pessoais não serão compartilhados com terceiros sem seu consentimento, exceto quando exigido por lei.</p>
+                <p><strong>3. Compartilhamento:</strong> Seus dados pessoais não serão compartilhados com terceiros sem seu consentimento, excepto quando exigido por lei.</p>
                 <p><strong>4. Seus Direitos:</strong> Você tem o direito de acessar, corrigir, excluir ou portar seus dados a qualquer momento.</p>
                 <p>Ao marcar a caixa abaixo, você concorda com estes termos e com o processamento de seus dados pessoais para estas finalidades.</p>
 
@@ -70,6 +70,12 @@
             <div id="register-error" class="error"></div>
             <div id="register-success" class="success"></div>
         </div>
+    </div>
+
+    <div id="transition-screen" style="display: none;">
+        <div class="loader"></div>
+        <h2>Carregando InventControl⚙️</h2>
+        <p>Redirecionando para a tela principal...</p>
     </div>
     <script src="login.js"></script>
 </body>
